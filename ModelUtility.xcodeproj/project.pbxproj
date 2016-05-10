@@ -7,10 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC16B0451CE176260008633F /* ModelInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = EC16B03E1CE176260008633F /* ModelInfo.h */; };
+		EC16B0461CE176260008633F /* ModelInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EC16B03F1CE176260008633F /* ModelInfo.m */; };
+		EC16B0471CE176260008633F /* ModelUtilityMacro.h in Headers */ = {isa = PBXBuildFile; fileRef = EC16B0401CE176260008633F /* ModelUtilityMacro.h */; };
+		EC16B0481CE176260008633F /* NSManagedObject+ModelUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = EC16B0411CE176260008633F /* NSManagedObject+ModelUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC16B0491CE176260008633F /* NSManagedObject+ModelUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = EC16B0421CE176260008633F /* NSManagedObject+ModelUtility.m */; };
+		EC16B04A1CE176260008633F /* NSObject+ModelUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = EC16B0431CE176260008633F /* NSObject+ModelUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC16B04B1CE176260008633F /* NSObject+ModelUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = EC16B0441CE176260008633F /* NSObject+ModelUtility.m */; };
 		ECEC3EF21CE070DE008729D6 /* ModelUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = ECEC3EF11CE070DE008729D6 /* ModelUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EC16B03E1CE176260008633F /* ModelInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelInfo.h; sourceTree = "<group>"; };
+		EC16B03F1CE176260008633F /* ModelInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelInfo.m; sourceTree = "<group>"; };
+		EC16B0401CE176260008633F /* ModelUtilityMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelUtilityMacro.h; sourceTree = "<group>"; };
+		EC16B0411CE176260008633F /* NSManagedObject+ModelUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+ModelUtility.h"; sourceTree = "<group>"; };
+		EC16B0421CE176260008633F /* NSManagedObject+ModelUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+ModelUtility.m"; sourceTree = "<group>"; };
+		EC16B0431CE176260008633F /* NSObject+ModelUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ModelUtility.h"; sourceTree = "<group>"; };
+		EC16B0441CE176260008633F /* NSObject+ModelUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ModelUtility.m"; sourceTree = "<group>"; };
 		ECEC3EEE1CE070DE008729D6 /* ModelUtility.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ModelUtility.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECEC3EF11CE070DE008729D6 /* ModelUtility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelUtility.h; sourceTree = "<group>"; };
 		ECEC3EF31CE070DE008729D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,6 +60,13 @@
 		ECEC3EF01CE070DE008729D6 /* ModelUtility */ = {
 			isa = PBXGroup;
 			children = (
+				EC16B03E1CE176260008633F /* ModelInfo.h */,
+				EC16B03F1CE176260008633F /* ModelInfo.m */,
+				EC16B0431CE176260008633F /* NSObject+ModelUtility.h */,
+				EC16B0441CE176260008633F /* NSObject+ModelUtility.m */,
+				EC16B0411CE176260008633F /* NSManagedObject+ModelUtility.h */,
+				EC16B0421CE176260008633F /* NSManagedObject+ModelUtility.m */,
+				EC16B0401CE176260008633F /* ModelUtilityMacro.h */,
 				ECEC3EF11CE070DE008729D6 /* ModelUtility.h */,
 				ECEC3EF31CE070DE008729D6 /* Info.plist */,
 			);
@@ -59,6 +80,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC16B0451CE176260008633F /* ModelInfo.h in Headers */,
+				EC16B0481CE176260008633F /* NSManagedObject+ModelUtility.h in Headers */,
+				EC16B04A1CE176260008633F /* NSObject+ModelUtility.h in Headers */,
+				EC16B0471CE176260008633F /* ModelUtilityMacro.h in Headers */,
 				ECEC3EF21CE070DE008729D6 /* ModelUtility.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -130,6 +155,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC16B0491CE176260008633F /* NSManagedObject+ModelUtility.m in Sources */,
+				EC16B0461CE176260008633F /* ModelInfo.m in Sources */,
+				EC16B04B1CE176260008633F /* NSObject+ModelUtility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +305,7 @@
 				ECEC3EF81CE070DE008729D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
