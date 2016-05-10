@@ -8,16 +8,16 @@ JSON转Model框架，解决其他类似框架在Swift中使用CoreData的Crash�
 
 ### 使用
 
-##### 不使用CoreData 
+##### 不使用CoreData
 ```
 class User: NSObject {
-var id: NSNumber? // 不能使用`Int?` 该类型OC runtime解析不出，会导致属性解析失败 
-var userInfo: UserInfo?
+    var id: NSNumber? // 不能使用`Int?` 该类型OC runtime解析不出，会导致属性解析失败
+    var userInfo: UserInfo?
 }
 
 class UserInfo: NSObject {
-var name: String?
-var age: NSNumber?
+    var name: String?
+    var age: NSNumber?
 }
 
 let JSON = ["id":1,"userInfo":["name":"isunimp","age":22]]
@@ -35,13 +35,13 @@ print("age:\(user.userInfo?.age)")      // 22
 
 ```
 class User: NSManagedObject {
-@NSManaged var id: NSNumber?
-@NSManaged var userInfo: UserInfo?
+    @NSManaged var id: NSNumber?
+    @NSManaged var userInfo: UserInfo?
 }
 
 class UserInfo: NSManagedObject {
-@NSManaged var name: String?
-@NSManaged var age: NSNumber?
+    @NSManaged var name: String?
+    @NSManaged var age: NSNumber?
 }
 
 let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
