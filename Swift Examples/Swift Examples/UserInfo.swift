@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreData
 
-class UserInfo: NSObject {
-    var name: String?
-    var age: NSNumber?
+class UserInfo: NSManagedObject {
+    @NSManaged var name: String?
+    @NSManaged var age: NSNumber?
 }

@@ -14,9 +14,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let objectContext = appDelegate.managedObjectContext
         let JSON = ["id":1,"userInfo":["name":"isunimp","age":22]]
-        
-        let user =  User.mu_modelWithKeyValues(JSON)
+        let user =  User.mu_modelWithClass(User.self, keyValues: JSON, inContext: objectContext)
         
         print("id:\(user.id)")
         print("name:\(user.userInfo?.name)")
@@ -28,5 +29,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+
 }
 
