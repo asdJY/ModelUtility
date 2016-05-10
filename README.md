@@ -9,7 +9,8 @@ JSON转Model框架，解决其他类似框架在Swift中使用CoreData的Crash�
 ### 使用
 
 ##### 不使用CoreData
-```
+
+```swift
 class User: NSObject {
     var id: NSNumber? // 不能使用`Int?` 该类型OC runtime解析不出，会导致属性解析失败
     var userInfo: UserInfo?
@@ -33,7 +34,7 @@ print("age:\(user.userInfo?.age)")      // 22
 <img src="http://7xrukr.com1.z0.glb.clouddn.com/ModelUtility_SwiftExamples_xcdatamodeld.png-isunimp" height=60% width=60%/>
 > 注意：userInfo使用类型为`Transformable`
 
-```
+```swift
 class User: NSManagedObject {
     @NSManaged var id: NSNumber?
     @NSManaged var userInfo: UserInfo?
