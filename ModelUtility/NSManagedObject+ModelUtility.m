@@ -15,8 +15,7 @@
 
 + (instancetype)mu_modelWithClass:(Class)cls KeyValues:(NSDictionary *)JSONObject inContext:(NSManagedObjectContext *)context{
     Class clazz = cls ? cls : [self class];
-    NSString *entityName = MUClassName(clazz);
-    id model = [NSEntityDescription insertNewObjectForEntityForName:entityName inManagedObjectContext:context];
+    id model = [NSEntityDescription insertNewObjectForEntityForName:MUClassName(clazz) inManagedObjectContext:context];
     [model mu_setValuesWithClass:cls keyValues:JSONObject inContext:context];
     return model;
 }

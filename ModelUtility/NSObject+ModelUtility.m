@@ -22,6 +22,8 @@
     [self mu_setValuesWithClass:nil keyValues:JSONObject inContext:nil];
 }
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wincompatible-pointer-types-discards-qualifiers"
 - (void)mu_setValuesWithClass:(Class)cls keyValues:(NSDictionary *)JSONObject inContext:(NSManagedObjectContext *)context{
     if(!JSONObject || !self){ return; }
     Class modelObjectClass = cls ? cls : [self class];
@@ -45,10 +47,10 @@
                      [self setValue:JSONAllValues[idx] forKey:obj];
                  }else if ([valueCls isSubclassOfClass:[NSDictionary class]]){
                      Class propertyClass = modelInfo.propertyClasss[locationIndex];
-                     NSString *entityName = MUClassName(propertyClass);
-                     id object = context ? [NSEntityDescription insertNewObjectForEntityForName:entityName inManagedObjectContext:context]:[propertyClass new];
-                     [object mu_setValuesWithClass:propertyClass keyValues:JSONAllValues[idx] inContext:context];
-                     [self setValue:object forKey:obj];
+                     id subObject = context ? [NSEntityDescription insertNewObjectForEntityForName:MUClassName(propertyClass)
+                                                                         inManagedObjectContext:context]:[propertyClass new];
+                     [subObject mu_setValuesWithClass:propertyClass keyValues:JSONAllValues[idx] inContext:context];
+                     [self setValue:subObject forKey:obj];
                  }
              }
          }else{
@@ -57,5 +59,5 @@
          }
      }];
 }
-
+#pragma clang diagnostic end
 @end
