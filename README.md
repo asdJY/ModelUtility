@@ -1,6 +1,6 @@
 ## ModelUtility
 
-JSON转Model框架，解决其他类似框架在Swift中使用CoreData的Crash问题以及解析不成功等问题，专注于为Swift提供一个强大且稳定的Model框架。
+JSON转Model框架，解决其他类似框架在Swift中使用CoreData的Crash问题以及解析不成功等问题，`嵌套类型`必须支持，专注于为Swift提供一个强大且稳定的Model框架。
 
 ### 安装
 
